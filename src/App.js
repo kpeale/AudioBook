@@ -1,11 +1,10 @@
-import Login from './Login';
-
+import Login from './Login.jsk';
 
 function App() {
   return (
    <section className="login__section">
-    I am coming
-    <Login login={login}></Login>
+    <p className='heading__primary'>I am coming</p>
+    <Login/>
    </section>
   );
 }

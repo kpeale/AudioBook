@@ -1,4 +1,3 @@
-import React from "react";
 
 const Login = () => {
   <div className="login__section--container1">
