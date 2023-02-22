@@ -1,11 +1,11 @@
-import login from './Login';
+import Login from './Login';
 
 
 function App() {
   return (
    <section className="login__section">
     I am coming
-    <login login={login}></login>
+    <Login login={login}></Login>
    </section>
   );
 }
