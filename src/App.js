@@ -1,10 +1,12 @@
-import Login from './Login.jsk';
+import React from "react";
+import Login from './Login.js';
+// import Test from './Test.jsx';
+
 
 function App() {
   return (
    <section className="login__section">
-    <p className='heading__primary'>I am coming</p>
-    <Login/>
+     <Login/>
    </section>
   );
 }
