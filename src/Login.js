@@ -1,11 +1,23 @@
 import React, { useState } from "react";
 
+import { AiFillEye} from 'react-icons/ai';
+
+import { AiFillEyeInvisible} from 'react-icons/ai';
+
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const [changePassword, setChangePassword] = useState(true);
+  const changeIcon = changePassword === true ? false : true;
+
+  
  const handleSubmit = (e) => {
   e.preventDefault();
  }
+
+ 
   return (
     <>
     <div className="login__section--container">
@@ -25,7 +37,15 @@ const Login = () => {
 
       <div className="form-content">
         <label htmlFor="password" className="label-password">Password </label>
-        <input type='password' id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+        <input type={changePassword ? "password" : "text"} id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required></input>
+        
+        <span className="eye"
+                 onClick={() => {
+                    setChangePassword(changeIcon);
+                 }}
+              >
+                 {changeIcon ? <AiFillEye /> : <AiFillEyeInvisible />}
+              </span>
       </div>
 
       <button type="submit" className="btn--form">Login</button>
